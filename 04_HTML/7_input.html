@@ -69,5 +69,58 @@
     2. 스크린 리더 사용자(사용자가 요소에 초점을 맞추면 레이블을 소리내어 읽음)
   -->
 
+  <br>
+
+  <!-- 값을 미리 체크 -->
+  <label>
+    <input type="checkbox"> Apple
+  </label>
+  <label>
+    <input type="checkbox" checked> Banana
+  </label>
+
+  <hr>
+
+  <!-- 라디오 버튼 -->
+  <label>
+    <input type="radio"> Apple
+  </label>
+  <label>
+    <input type="radio"> Banana
+  </label>
+
+  <br>
+
+  <!-- name 속성으로 그룹화 -->
+  <!-- 체크박스는 중복 선택 가능, 라디오 버튼은 그룹당 한개만 선택 가능 -->
+  <label>
+    <input type="radio" name="fruits" checked> Apple
+  </label>
+  <label>
+    <input type="radio" name="fruits"> Banana
+  </label>
+
+  <hr>
+
+  <!-- 그 밖에 다른 입력 양식들(w3school 참고)(input type에서 ctrl + space) -->
+  
+  <!-- 버튼 -->
+  <input type="button" value="닫기">
+
+  <button type="button">닫기</button>
+  <!-- button 태그의 장점
+    요소 내부에 텍스트 뿐만 아니라 다른 태그를 넣을 수 있음 
+  -->
+  <button type="button">
+    <b>닫기</b><br>
+    테스트
+  </button>
+
+  <hr>
+
+  <!-- 색상 선택도구(Color Picker) -->
+  <label for="favcolor">색상 선택:</label>
+  <input type="color" id="favcolor" value="#ff0000">
+
 </body>
 </html>
