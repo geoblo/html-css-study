@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    /* 1. (어떠한 행동을 했을 때 동작하는) 가상 클래스 선택자 */
+    /* :hover (마우스 커서가 올라가 있는 동안 선택) */
+    a:hover {
+      color: red;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      transition: 1s; /* 전환 효과(추후 배움) */
+    }
+    /* Quiz */
+    /* .box:hover {
+      width: 300px;
+      background-color: royalblue;
+    } */
+
+    /* :active (마우스를 클릭하고 있는 동안 선택) */
+    /* 모바일에서 :hover 대신에 꼼수로 사용 */
+    /* 버튼을 누르는 효과를 줄 때 잘 활용한 예시(보통은 버튼 색상만 변경): https://codepen.io/jooing/pen/jOMybXY */
+    a:active {
+      color: lime;
+    }
+
+    .box:active {
+      width: 300px;
+      background-color: royalblue;
+    }
+  </style>
+</head>
+<body>
+  <a href="https://www.naver.com">NAVER</a>
+
+  <div class="box"></div>
+
+</body>
+</html>
