@@ -45,6 +45,27 @@
 
     .white-space-nowrap { white-space: nowrap; }
     .white-space-pre { white-space: pre; }
+
+    div.box {
+      width: 150px;
+      border: 1px solid black;
+
+      /* 말 줄임표 만드는 CSS 패턴 */
+      /* 아래 3개 속성이 세트로 같이 필요 */
+      white-space: nowrap; /* 줄바꿈 안함 */
+      overflow: hidden; /* 넘친 부분 숨기기 */
+      text-overflow: ellipsis; /* 넘쳐서 숨긴 부분을 줄임표로 표시 */
+    }
+    div.box-multiline {
+      width: 300px;
+      border: 1px solid black;
+
+      display: -webkit-box; /* 해당 영역을 box 형태로 관리 */
+      -webkit-box-orient: vertical; /* 영역 박스 안의 내용을 세로로 배치 */
+      -webkit-line-clamp: 2; /* 영역 박스 안 내용의 최대 라인수 */
+      overflow: hidden;
+    }
+    /* (참고) can i use? 웹 프론트(HTML, CSS, JS) 기술의 브라우저 지원을 알 수 있다. */
   </style>
 </head>
 <body>
@@ -113,5 +134,26 @@
     Etiam semper diam at erat pulvinar, at pulvinar felis blandit.
     Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.
   </p>
+
+  <!-- Tip! 넘치는 텍스트에 말 줄임표(...) 만들기 -->
+  <h1>text-overflow: 오버플로우 된 내용을 어떻게 보일지 지정</h1>
+  <h2>ellipsis: 생략(...)</h2>
+  <div class="box">이것은 매우 긴 제목입니다.</div>
+  
+  <h2>2줄 이상일 때</h2>
+  <div class="box-multiline">
+    이것은 매우 긴 설명입니다. 이것은 매우 긴 설명입니다. 이것은 매우 긴 설명입니다. 이것은 매우 긴 설명입니다.
+  </div>
 </body>
 </html>
+
+<!-- (정리) Quiz
+  Q1: 문자를 수평 정렬하는 속성은?
+  A1: 
+
+  Q2: 문자를 들여쓰는 속성은?
+  A2: 
+
+  Q3: text-decoration 속성의 기본값은?
+  A3: 
+-->
