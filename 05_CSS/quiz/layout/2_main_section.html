@@ -7,7 +7,67 @@
   <title>Document</title>
 
   <style>
-    
+    .main-background {
+      width: 100%;
+      height: 500px;
+      background-image: url("images/shoes.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      text-align: center;
+      padding-top: 50px;
+
+      position: relative;
+    }
+    .main-title {
+      color: #fff;
+      font-size: 40px;
+    }
+    .main-content {
+      color: #fff;
+    }
+    .main-button {
+      padding: 10px 30px;
+      font-size: 20px;
+      background-color: #fff;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .main-button:hover {
+      background-color: #eee;
+    }
+
+    /* 겹치는 레이아웃 만들기 */
+    .sub-description {
+      /* 화면이 작을 때는 부모 width의 80%만, 넓어지면 최대 700px 까지 */
+      width: 80%;
+      max-width: 700px;
+      background-color: #eee;
+      padding: 10px;
+      border-radius: 20px;
+
+      /* 1) relative 사용 시 */
+      /* position: relative;
+      top: 120px;
+      margin: 0 auto; */
+
+      /* 2) absolute 사용 시 */
+      position: absolute;
+      bottom: -100px;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    .history {
+      background-color: #aeaeae;
+      padding: 100px 20px 40px;
+    }
+    .history > h4 {
+      text-align: center;
+    }
   </style>
 </head>
 <body>
