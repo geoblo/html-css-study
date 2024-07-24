@@ -59,10 +59,10 @@
     }
 
     .material-symbols-outlined {
-      font-size: 70px;
+      font-size: 100px;
       cursor: pointer;
     }
-    .material-symbols-outlined:hover {
+    .turn:hover {
       animation: turn 1s;
       animation-fill-mode: forwards; /* 애니메이션이 끝났을 때 상태 유지 */
     }
@@ -72,6 +72,14 @@
       25% { transform: rotate(-15deg); }
       100% { transform: rotate(45deg); }
     }
+
+    .spin {
+      animation: spin infinite 3s linear;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
   </style>
 </head>
 <body>
@@ -80,7 +88,10 @@
   <button type="button" class="btn btn-shake-hard">바들바들</button>
 
   <h2>turn 애니메이션 만들기</h2>
-  <span class="material-symbols-outlined">add</span>
+  <span class="material-symbols-outlined turn">add</span>
+
+  <h2>spin 애니메이션 만들기</h2>
+  <span class="material-symbols-outlined spin">self_improvement</span>
 
   <h1 class="animate__animated animate__bounce">An animated element</h1>
   <h1 class="animate__animated animate__bounce animate__delay-2s">An animated element</h1>
