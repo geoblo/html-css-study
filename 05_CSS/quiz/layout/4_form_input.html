@@ -38,6 +38,54 @@
 
     .form-container {
       /* 가로 길이는 80%를 차지하다가 600px에서 더 이상 안늘어나도록 제한 */
+      width: 80%;
+      max-width: 600px;
+      background-color: #fff;
+      padding: 30px;
+      margin: 0 auto;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 10px;
+      font-size: 20px;
+      border: 2px solid #eee;
+      border-radius: 6px;
+      outline: none;
+      transition: 0.5s;
+    }
+    .form-input:focus {
+      /* border: 2px solid #aaa; */
+      border-color: #aaa;
+    }
+
+    .name-box {
+      display: flex;
+    }
+    .name-box > div:first-child {
+      width: 50%;
+      padding: 10px 10px 10px 0;
+    }
+    .name-box > div:last-child {
+      width: 50%;
+      padding: 10px 0 10px 10px;
+    }
+
+    .btn-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn-send {
+      padding: 8px 40px;
+      color: #fff;
+      background-color: lightsalmon;
+      border: none;
+      border-radius: 4px;
+      transition: 0.5s;
+    }
+    .btn-send:hover {
+      background-color: coral;
     }
   </style>
 </head>
@@ -64,6 +112,38 @@
       <form>
         <h3>Contact Us</h3>
 
+        <p>
+          <label for="email">Your Email</label>
+        </p>
+        <input type="email" id="email" class="form-input" placeholder="email@example.com">
+
+        <div class="name-box">
+          <div>
+            <p>
+              <label for="firstname">First Name</label>
+            </p>
+            <input type="text" id="firstname" class="form-input">
+          </div>
+          <div>
+            <p>
+              <label for="lastname">Last Name</label>
+            </p>
+            <input type="text" id="lastname" class="form-input">
+          </div>
+        </div>
+
+        <p>
+          <label for="msg">Message</label>
+        </p>
+        <textarea id="msg" class="form-input"></textarea>
+
+        <div class="btn-box">
+          <div>
+            <input type="checkbox" id="agree">
+            <label for="agree">Agree</label>
+          </div>
+          <button type="submit" class="btn-send">SEND</button>
+        </div>
       </form>
     </div>
   </div>
