@@ -67,3 +67,22 @@ header nav ul li a:hover {
   color: orange;
   /* text-shadow: 1px 1px 5px #333; */
 }
+
+/* VISUAL */
+.visual {
+  /* (중요)
+    헤더가 fixed 되어 일반 배치 흐름에서 벗어남
+    fixed 헤더 다음에 오는 섹션은 헤더의 높이만큼 외부 여백 추가 필요
+  */
+  margin-top: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px);
+}
+.visual video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
