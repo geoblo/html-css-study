@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 
+  <!-- 구글 머티리얼 아이콘 -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
   <style>
     .btn {
       padding: 15px 20px;
@@ -36,7 +42,7 @@
     }
 
     .btn-shake-hard:hover {
-      animation: shake-hard .4s;
+      animation: shake-hard .4s infinite;
     }
     @keyframes shake-hard {
       0% { transform: translate(1px, 1px) rotate(0deg); }
@@ -51,11 +57,35 @@
       90% { transform: translate(1px, 2px) rotate(0deg); }
       100% { transform: translate(1px, -2px) rotate(-1deg); }
     }
+
+    .material-symbols-outlined {
+      font-size: 70px;
+      cursor: pointer;
+    }
+    .material-symbols-outlined:hover {
+      animation: turn 1s;
+      animation-fill-mode: forwards; /* 애니메이션이 끝났을 때 상태 유지 */
+    }
+
+    @keyframes turn {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(-15deg); }
+      100% { transform: rotate(45deg); }
+    }
   </style>
 </head>
 <body>
   <h2>shake 애니메이션 만들기</h2>
   <button type="button" class="btn btn-shake">흔들흔들</button>
   <button type="button" class="btn btn-shake-hard">바들바들</button>
+
+  <h2>turn 애니메이션 만들기</h2>
+  <span class="material-symbols-outlined">add</span>
+
+  <h1 class="animate__animated animate__bounce">An animated element</h1>
+  <h1 class="animate__animated animate__bounce animate__delay-2s">An animated element</h1>
+  <h1 class="animate__animated animate__bounce animate__faster">An animated element</h1>
+  <h1 class="animate__animated animate__bounce animate__repeat-2">An animated element</h1>
+  <h1 class="animate__animated animate__fadeInLeft">An animated element</h1>
 </body>
 </html>
