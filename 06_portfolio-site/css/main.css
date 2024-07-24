@@ -1,9 +1,32 @@
 /* COMMON */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff8e8;
+  overflow-x: hidden;
 }
 
 /* 영문에만 적용할 폰트 */
 .font-en {
   font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.inner {
+  /* 고정 길이=고정형 */
+  /* width: 1200px; */
+  /* 최대값만 제한=반응형 */
+  max-width: 1200px;
+  margin: 0 auto;
 }
