@@ -3,6 +3,11 @@
   box-sizing: border-box;
 }
 
+html {
+  /* 스크롤 이동을 부드럽게 */
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
@@ -34,6 +39,21 @@ a {
 img {
   /* 이미지가 인라인 요소라서 발생하는 문자 기준선(baseline) 아래의 공간을 제거하기 위해 */
   display: block;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.title:after {
+  content: ""; /* 필수 속성 */
+  display: block;
+  width: 80px;
+  height: 2px;
+  background-color: #333;
+  margin: 24px auto 0;
 }
 
 /* HEADER */
@@ -96,6 +116,7 @@ header nav ul li a:hover {
 }
 .about .inner {
   padding-bottom: 30px;
+  position: relative;
 }
 .about .about__wrapper {
   display: flex;
@@ -114,4 +135,31 @@ header nav ul li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+.about .about__wrapper .about__text .slogan {
+  font-weight: bold;
+  font-size: 35px;
+}
+.about .about__wrapper .about__text h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.about .about__wrapper .about__text h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.about .about__wrapper .about__text li {
+  line-height: 1.8;
+}
+.about .about__btn {
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+}
+.about .about__btn img {
+  display: inline;
+  width: 28px;
+  margin-right: 10px;
+  vertical-align: middle;
 }
