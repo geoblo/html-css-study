@@ -304,9 +304,10 @@ header nav ul li a:hover {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 999;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
+  display: none;
 }
 #modal .modal__inner {
   width: 80%;
